@@ -25,3 +25,28 @@ public String extractUsername(String token) throws
  ExpiredJwtException, UnsupportedJwtException, MalformedJwtException, SignatureException, IllegalArgumentException
     
 ```
+
+## How to get the token:
+you need to interact wiht the admin service to login -> send a post request to the admin-service-url/login endpoint 
+whith body containing the admin credintials 
+```
+{
+"email":"admin@fawry.com",
+"password":"123456"
+}
+
+```
+
+and you will receive a response envelop like this
+```
+{
+  "success": true,
+  "data": {
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBmYXdyeS5jb20iLCJpYXQiOjE2OTI2Mzg3OTIsImV4cCI6MTY5MjY0MjM5Mn0.yx676UmRqQ9KYqyJmXuXhPjKzGaf5GsBg-OZJKkaBwU"
+  },
+  "errorDetails": null
+}
+```
+
+then you can consume the token and validate it without interacting with admin service for validation.
+the token expires in 1 hour.
