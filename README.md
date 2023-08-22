@@ -27,7 +27,7 @@ public String extractUsername(String token) throws
 ```
 
 ## How to get the token:
-you need to interact wiht the admin service to login -> send a post request to the admin-service-url/login endpoint 
+you need to interact wiht the admin service to login -> send a post request to this endpoint https://admin-service-api.onrender.com/login
 whith body containing the admin credintials 
 ```
 {
