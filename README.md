@@ -1,7 +1,34 @@
 # jwt-validator-jar
 
 ## How to use:
-you just need to add this jar into your dependencies and include it your pom.xml file 
+you just need to download and add this jar into your dependencies and then include it your pom.xml file 
+1. first add it as a local dependency in maven using this command
+   ```
+   mvn install:install-file \
+   -Dfile=<path-to-file> \
+   -DgroupId=<group-id> \
+   -DartifactId=<artifact-id> \
+   -Dversion=<version> \
+   -Dpackaging=<packaging> \
+   -DgeneratePom=true
+
+   ```
+
+   Where each refers to:
+
+<path-to-file>: the path to the file to load 
+
+<group-id>: the group that the file should be registered under e.g → fawry.internship
+
+<artifact-id>: the artifact name for the file e.g → jwt-validator
+
+<version>: the version of the file e.g → 1.0-SNAPSHOT
+
+<packaging>: the packaging of the file e.g. → jar
+
+
+2. add this dependency in your pom.xml file.
+
 ```
 <dependency>
 			<groupId>fawry.internship</groupId>
